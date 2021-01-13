@@ -218,28 +218,41 @@ System.out.println(totalAmountOfShovelTime);
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
-
+int numberOfHotdogs =6;
+double costOfOneHotdog = .50;
+double amountPaid = numberOfHotdogs * costOfOneHotdog;
         /*
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-
+double totalMoney = .50;
+double costOfPencil = .07;
+double totalPencils = totalMoney / costOfPencil;
+System.out.println(totalPencils);
         /*
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
+int totalButterflies = 33;
+int orangeButterflies = 20;
+int redButterflies = totalButterflies - orangeButterflies;
 
         /*
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
-
+int moneyOwned = 1;
+double moneySpent = .54;
+double remainingMoney = moneyOwned - moneySpent;
         /*
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
-
+int initialTrees = 13;
+int treesPlanted = 12;
+int totalTrees = initialTrees + treesPlanted;
+System.out.println(totalTrees);
         /*
         31. Joy will see her grandma in two days. How many hours until she sees
         her?
