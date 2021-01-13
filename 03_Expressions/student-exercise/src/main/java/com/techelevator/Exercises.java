@@ -125,6 +125,18 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
+		if (negative ) {
+			return true;
+		}
+		else if (a == -a) {
+			return true;
+		}
+		else if (b == -b ) {
+			return true;
+		}
+		
+		
+		
 		return false;
 	}
 
@@ -136,6 +148,13 @@ public class Exercises {
 	 or35(8) → false
 	 */
 	public boolean or35(int n) {
+		
+		if (n % 3 == 0) {
+			return true;
+		}
+		else if (n % 5 == 0) {
+			return true;
+		}
 		return false;
 	}
 
@@ -146,6 +165,14 @@ public class Exercises {
 	 icyHot(2, 120) → false
 	 */
 	public boolean icyHot(int temp1, int temp2) {
+		
+		if (temp1 <0 && temp2 > 100) {
+			return true;
+		}
+		else if (temp1 >100 && temp2 <0) {
+			return true;
+		}
+		
 		return false;
 	}
 
@@ -156,6 +183,13 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
+		
+		if (a >=10 && a<=20) {
+			return true;
+		}
+		else if (b >=10 && b<=20) {
+			return true;
+		}
 		return false;
 	}
 
