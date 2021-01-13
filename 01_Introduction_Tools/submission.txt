@@ -14,7 +14,7 @@
 ✅ 13. ~/playground/usa/michigan/wayne exists
 ✅ 14. ~/playground/usa/ohio/cuyahoga/cleveland.txt exists
 ✅ 15. ~/playground/usa/ohio/hamilton/cincinnati.txt exists
-❗️ 16. ~/playground/usa/ohio/franklin/columbus.txt does not exist
+✅ 16. ~/playground/usa/ohio/franklin/columbus.txt exists
 ❗️ 17. ~/playground/usa/pennsylvania/allegheny/pittsburgh.txt does not exist
 ❗️ 18. ~/playground/usa/michigan/wayne/detroit.txt does not exist
 ❗️ 19. ~/playground/canada/quebec/montreal.txt does not exist
@@ -22,4 +22,4 @@
 ❗️ 21. ~/playground/canada/british columbia/vancouver.txt does not exist
 ❗️ 22. ~/playground/canada/british columbia/prince-george.txt does not exist
 
-15/22 tests pass
+16/22 tests pass
