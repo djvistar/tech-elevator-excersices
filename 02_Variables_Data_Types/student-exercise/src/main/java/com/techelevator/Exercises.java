@@ -332,19 +332,26 @@ System.out.println(cookiesLeft);
         neighbors. If each neighbor received and equal number of croissants,
         how many will be left with Marian?
         */
-
+int totalCroissants = 59;
+int numberOfNeighbours = 8;
+int croissantsLeft = totalCroissants % numberOfNeighbours;
         /*
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
-
+int totalCookies = 276;
+int cookiesPerTray = 12;
+int traysNeeded = totalCookies / cookiesPerTray;
         /*
         43. Marian’s friends were coming over that afternoon so she made 480
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
         servings of bite-sized pretzels was Marian able to prepare?
         */
-
+int totalMiniPretzels = 480;
+int pretzelsPerServing = 12;
+int totalServings = totalMiniPretzels / pretzelsPerServing;
+System.out.println(totalServings);
         /*
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
