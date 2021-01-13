@@ -65,10 +65,17 @@ public class Exercises {
 	 diff21(22) → 2
 	 diff21(-10) → 31
 	 */
-	public int diff21(int n) {
-		return 0;
-	}
-
+	public int diff21(int n){
+		if (n > 21) {
+			return (n - 21)* 2;
+		}
+		else 
+		{ return 21- n;
+		}
+		}
+	
+	
+	
 	/*
 	 5. We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23.
 	 We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if
