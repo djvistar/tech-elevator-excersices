@@ -10,9 +10,15 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
+		
+		if (!weekday || vacation) {
+			return true;
+		}
+		
 		return false;
 	}
 
+	
 	/*
 	 2. We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling.
 	 We are in trouble if they are both smiling or if neither of them is smiling. Return true if we
@@ -22,6 +28,9 @@ public class Exercises {
 	 monkeyTrouble(true, false) → false
 	 */
 	public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+		
+		
+		
 		return false;
 	}
 
@@ -32,7 +41,14 @@ public class Exercises {
 	 sumDouble(2, 2) → 8
 	 */
 	public int sumDouble(int a, int b) {
-		return 0;
+		
+		if (a == b) {
+			return (a +b) * 2;
+		}
+		else {
+			return a +b;
+		}
+		
 	}
 
 	/*

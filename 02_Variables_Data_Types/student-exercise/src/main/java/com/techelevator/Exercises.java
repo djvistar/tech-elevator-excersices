@@ -411,6 +411,7 @@ int totalBaked = 17;
 int numberOfFriends = 7;
 int croissantsPerFriend = totalBaked / numberOfFriends;
 System.out.println(croissantsPerFriend);
+
         /*
             CHALLENGE PROBLEMS
         */
