@@ -188,23 +188,32 @@ System.out.println(totalCost);
         rocks to complete the border. She has 64 rocks. How many more rocks
         does she need to complete the border?
         */
-
+int totalRocksNeeded = 125;
+int rocksOwned = 64;
+int rocksMissing = totalRocksNeeded - rocksOwned;
         /*
         23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
         she have left?
         */
-
+int totalMarbles = 38;
+int marblesLost = 15;
+int marblesremaining  = totalMarbles - marblesLost;
         /*
         24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
         miles and then stopped for gas. How many miles did they have left to drive?
         */
-
+int totalMiles = 78;
+int milesDriven = 32;
+int milesLeft = totalMiles - milesDriven;
         /*
         25. Mrs. Hilt spent 1 hour and 30 minutes shoveling snow on Saturday
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time did she spend shoveling snow?
         */
-
+int morningShovelTime = 90;
+int afternoonShovelTime =45;
+int totalAmountOfShovelTime = morningShovelTime + afternoonShovelTime;
+System.out.println(totalAmountOfShovelTime);
         /*
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
