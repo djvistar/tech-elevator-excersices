@@ -294,28 +294,39 @@ System.out.println(legosLeft);
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
         */
-
+int totalMuffins = 83;
+int muffinsBaked = 35;
+int muffinsNeeded = totalMuffins - muffinsBaked;
         /*
         37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
         crayons does Willy have then Lucy?
         */
-
+int willysCrayons = 1400;
+int lucysCrayons = 290;
+int differenceInCrayons = willysCrayons - lucysCrayons;
         /*
         38. There are 10 stickers on a page. If you have 22 pages of stickers, how
         many stickers do you have?
         */
-
+int stickersPerPage = 10;
+int numberOfPages = 22;
+int totalStickers = stickersPerPage * numberOfPages;
         /*
         39. There are 96 cupcakes for 8 children to share. How much will each
         person get if they share the cupcakes equally?
         */
-
+int totalCupcakes = 96;
+int numberOfChildren = 8;
+int cupcakePerChild = totalCupcakes / numberOfChildren;
         /*
         40. She made 47 gingerbread cookies which she will distribute equally in
         tiny glass jars. If each jar is to contain six cookies each, how many
         cookies will not be placed in a jar?
         */
-
+int totalAmountOfCookies = 47;
+int cookiesPerJar = 6;
+int cookiesLeft = totalAmountOfCookies % cookiesPerJar;
+System.out.println(cookiesLeft);
         /*
         41. She also prepared 59 croissants which she plans to give to her 8
         neighbors. If each neighbor received and equal number of croissants,
