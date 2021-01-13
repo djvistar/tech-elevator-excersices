@@ -257,27 +257,39 @@ System.out.println(totalTrees);
         31. Joy will see her grandma in two days. How many hours until she sees
         her?
         */
+int hoursInADay = 24;
+int daysLeft = 2;
+int totalHours = hoursInADay * daysLeft;
 
         /*
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
         much gum will she need?
         */
-
+int numberOfCousins = 4;
+int piecesOfGumEach = 5;
+int totalGum = numberOfCousins * piecesOfGumEach;
         /*
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
-
+int dansMoney = 3;
+int costOfCandy = 1;
+int totalBalance = dansMoney - costOfCandy;
         /*
         34. 5 boats are in the lake. Each boat has 3 people. How many people are
         on boats in the lake?
         */
-
+int totalBoats = 5;
+int peoplePerBoat = 3;
+int totalNumberOfPeople = totalBoats * peoplePerBoat;
         /*
         35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
         have now?
         */
-
+int totalLegos = 380;
+int lostLegos = 57;
+int legosLeft = totalLegos - lostLegos;
+System.out.println(legosLeft);
         /*
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
