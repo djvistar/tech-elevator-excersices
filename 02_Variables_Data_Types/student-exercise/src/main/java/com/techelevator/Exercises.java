@@ -179,7 +179,10 @@ System.out.println(totalNumberOfLegs);
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
         */
-
+double costOfCone = .99;
+int numberOfCones = 2;
+double totalCost = costOfCone * numberOfCones;
+System.out.println(totalCost);
         /*
         22. Mrs. Hilt wants to make a border around her garden. She needs 125
         rocks to complete the border. She has 64 rocks. How many more rocks
