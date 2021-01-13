@@ -35,36 +35,63 @@ System.out.println (numberOfRacoonsLeft);
         /*
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
+int numberOfFlowers = 5;
+int numberOfBees = 3;
+int lessBeesThanFlowers = numberOfFlowers - numberOfBees;
+System.out.println(lessBeesThanFlowers);
+
 
         /*
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
         */
-
+int lonelyPigeon = 1;
+int secondPigeon = 1;
+int totalNumberOfPigeons = lonelyPigeon + secondPigeon;
+System.out.println(totalNumberOfPigeons);
         /*
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
-
+int initialNumberOfOwls = 3;
+int secondSetOfOwls = 2;
+int totalNumberOfOwls = initialNumberOfOwls + secondSetOfOwls;
+System.out.println(totalNumberOfOwls);
         /*
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
-
+int numberOfBeaversWorking = 2;
+int beaversThatWentSwimming = 1;
+int numberOfBeaversLeft = numberOfBeaversWorking - beaversThatWentSwimming;
+System.out.println(numberOfBeaversLeft);
         /*
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
+int initialTuocans = 2;
+int extraTuocans = 1;
+int totalNumberOfTuocans = initialTuocans + extraTuocans;
+System.out.println(totalNumberOfTuocans);
+
 
         /*
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
-
+int numberOfSquirrels = 4;
+int numberOfNuts = 2;
+int moreSquirrelsThanNuts = numberOfSquirrels - numberOfNuts;
+System.out.println(moreSquirrelsThanNuts);
         /*
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
+double valueOfQuarters = .25;
+double valueOfDimes = .10;
+double valueOfNickels = .10;
+double totalMoneyFound = valueOfQuarters + valueOfDimes + valueOfNickels;
+System.out.println(totalMoneyFound);
 
         /*
         11. Mrs. Hilt's favorite first grade classes are baking muffins. Mrs. Brier's
