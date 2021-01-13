@@ -117,17 +117,28 @@ System.out.println(totalValueOfToys);
         and 10 mini marshmallows.How many marshmallows did she use
         altogether?
         */
-
+int numberOfLargeMarshmallows = 8;
+int numberOfSmallMarshmallows = 10;
+int totalNumberOfMarshmallows = numberOfLargeMarshmallows + numberOfSmallMarshmallows;
+System.out.println(totalNumberOfMarshmallows);
         /*
         14. At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock
         Elementary School received 17 inches of snow. How much more snow
         did Mrs. Hilt's house have?
         */
-
+int mrsHiltsSnow = 29;
+int middleSchoolSnow = 17;
+int totalAmountOfSnow = mrsHiltsSnow + middleSchoolSnow;
         /*
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
+int totalAmountOfMoney = 10;
+int moneySpentOnToy = 3;
+int moneySpentOnPencil = 2;
+int moneyLeft = totalAmountOfMoney - (moneySpentOnToy + moneySpentOnPencil);
+System.out.println(moneyLeft);
+
 
         /*
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
