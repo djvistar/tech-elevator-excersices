@@ -99,12 +99,19 @@ System.out.println(totalMoneyFound);
         Mrs. Flannery's class bakes 17 muffins. How many muffins does first
         grade bake in all?
         */
-
+int mrsBriersMuffins = 18;
+int mrsMacadamsMuffins = 20;
+int mrsFlannerysMuffins = 17;
+int totalNumberOfMuffins = mrsBriersMuffins + mrsMacadamsMuffins + mrsFlannerysMuffins ;
+System.out.println(totalNumberOfMuffins);
         /*
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
-
+double valueOfYoyo = .24;
+double valueOfWhistle = .14;
+double totalValueOfToys = valueOfYoyo + valueOfWhistle;
+System.out.println(totalValueOfToys);
         /*
         13. Mrs. Hilt made 5 Rice Krispie Treats. She used 8 large marshmallows
         and 10 mini marshmallows.How many marshmallows did she use
