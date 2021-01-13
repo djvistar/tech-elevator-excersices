@@ -85,6 +85,14 @@ public class Exercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
+		
+		if (talking && hour <7) {
+			return true;
+		}
+		else if(talking && hour >20){
+				return true;
+			}
+		
 		return false;
 	}
 
@@ -95,7 +103,18 @@ public class Exercises {
 	 makes10(1, 9) → true
 	 */
 	public boolean makes10(int a, int b) {
-		return false;
+		
+		if (a == 10) {
+			return true;		
+		}
+		else if (b == 10) {
+			return true;
+		}
+		else if (a + b ==10 ){
+			return true;
+			
+		}
+	return false;
 	}
 
 	/*
