@@ -500,6 +500,11 @@ public class Exercises {
 	 less20(20) → false
 	 */
 	public boolean less20(int n) {
+		if (n % 20 +1 ==0  || n  % 20 +2 == 0 ) {
+			
+
+			return true;
+		}
 		return false;
 	}
 
@@ -511,6 +516,9 @@ public class Exercises {
 	 nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
+		if (num % 10  <= 2 ) {
+			return true;
+		}
 		return false;
 	}
 
