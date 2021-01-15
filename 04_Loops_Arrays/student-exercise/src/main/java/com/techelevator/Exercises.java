@@ -88,7 +88,17 @@ public class Exercises {
 	 reverse3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] reverse3(int[] nums) {
-		return new int[] {};
+
+		int[] reverse = new int[3];
+		
+		reverse[0] = nums[2];
+		reverse[1] = nums[1];
+		reverse[2] = nums[0];
+		
+	
+		return reverse;
+		
+		
 	}
 
 	/*

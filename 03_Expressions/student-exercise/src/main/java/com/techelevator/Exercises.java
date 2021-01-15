@@ -545,6 +545,9 @@ public class Exercises {
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+		if (!isMorning || !isAsleep && isMom) {
+			return true;
+		}
 		return false;
 	}
 
