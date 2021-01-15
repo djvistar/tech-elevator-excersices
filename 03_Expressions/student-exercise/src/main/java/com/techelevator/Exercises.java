@@ -125,20 +125,17 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
-		if (negative ) {
+		if (a == 1 && b ==-1 && negative) {
 			return true;
 		}
-		else if (a == -a) {
+		if (a == -1 && b == 1 && negative) {
 			return true;
 		}
-		else if (b == -b ) {
+		if (negative) {
 			return true;
 		}
-		
-		
-		
 		return false;
-	}
+		}
 
 	/*
 	 8. Return true if the given non-negative number is a multiple of 3 or a multiple of 5.
@@ -201,6 +198,16 @@ public class Exercises {
 	 hasTeen(20, 10, 13) → true
 	 */
 	public boolean hasTeen(int a, int b, int c) {
+		
+		if (a >=13 && a <=19) {
+			return true;
+		}
+		else if (b >=13 && b <=19) {
+			return true;
+		}
+		else if (c >=13 && c <=19) {
+			return true;
+		}
 		return false;
 	}
 
@@ -212,9 +219,13 @@ public class Exercises {
 	 loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
+		
+		
 		return false;
+		
 	}
-
+	
+	
 	/*
 	 13. Given three int values, a b c, return the largest.
 	 intMax(1, 2, 3) → 3
@@ -222,6 +233,16 @@ public class Exercises {
 	 intMax(3, 2, 1) → 3
 	 */
 	public int intMax(int a, int b, int c) {
+		
+		if (a > b && b > c) {
+			return a;
+		}
+		 if (b > a && a > c) {
+			return b;
+		}
+		else if (c > a &&  a >b ) {
+			return c;
+		}
 		return 0;
 	}
 
@@ -233,6 +254,18 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
+		if (a >= 30 && b <=40) {
+			return true;
+		}
+		if (b >= 30 && a <=40) {
+			return true;
+		}
+		if (a >= 40 && b <=50) {
+			return true;
+		}
+		if (b >= 40 && a <=50) {
+			return true;
+		}
 		return false;
 	}
 
@@ -244,8 +277,10 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
+		
 		return 0;
 	}
+	
 
 	/*
 	 16. When squirrels get together for a party, they like to have cigars. A squirrel party is successful
@@ -257,6 +292,14 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
+		
+		if (cigars >= 40 && isWeekend) {
+			return true;
+		} 
+		if ( cigars >=40 && cigars <=60 && !isWeekend) {
+			return true;
+		}
+	
 		return false;
 	}
 
@@ -272,8 +315,21 @@ public class Exercises {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
+		
+		if (you >=8 && date >2 || date >=8 && you >2) {
+			return 2;
+		}
+		
+		if (you  < 8 && date >2 || date  < 8 && you >2) {
+			return 1;
+		}
+		
 		return 0;
 	}
+	
+		
+	
+	
 
 	/*
 	 18. The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature
@@ -284,6 +340,15 @@ public class Exercises {
 	 squirrelPlay(95, true) → true
 	 */
 	public boolean squirrelPlay(int temp, boolean isSummer) {
+		
+		if (temp >=60 && temp <=100 && isSummer) {
+			return true;
+		}
+		
+		if (temp >=60 && temp <=90 && !isSummer) {
+			return true;
+		
+		}
 		return false;
 	}
 
@@ -319,7 +384,10 @@ public class Exercises {
 	 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
-		return 0;
+		if (a+b >=10 && a+b <=19) {
+			return 20;
+		}
+		return a +b;
 	}
 
 	/*
@@ -366,6 +434,8 @@ public class Exercises {
 	 more20(22) → true
 	 */
 	public boolean more20(int n) {
+		
+			
 		return false;
 	}
 
@@ -377,6 +447,7 @@ public class Exercises {
 	 old35(15) → false
 	 */
 	public boolean old35(int n) {
+	
 		return false;
 	}
 

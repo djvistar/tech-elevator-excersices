@@ -40,6 +40,14 @@ public class Exercises {
 	 commonEnd([1, 2, 3], [1, 3]) → true
 	 */
 	public boolean commonEnd(int[] a, int[] b) {
+		
+		System.out.println("a length is " + a.length);
+		System.out.println("b length is " + b.length);
+
+		
+		if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) {
+			return true;
+		}
 		return false;
 	}
 
@@ -61,7 +69,15 @@ public class Exercises {
 	 rotateLeft3([7, 0, 0]) → [0, 0, 7]
 	 */
 	public int[] rotateLeft3(int[] nums) {
-		return new int[] {};
+		
+		int[] newArray = new int[3];
+		
+		newArray[0] = nums[1];
+		newArray[1] = nums[2];
+		newArray[2] = nums[0];
+		
+	
+		return newArray;
 	}
 
 	/*
@@ -116,7 +132,18 @@ public class Exercises {
 	 countEvens([1, 3, 5]) → 0
 	 */
 	public int countEvens(int[] nums) {
-		return 0;
+		
+		int count = 0;
+			
+		for (int i =0; i <nums.length; i++) {
+			
+			if (nums[i] % 2 == 0) {
+				count++;
+			}
+		}
+			
+			
+		return count;
 	}
 
 	/*
