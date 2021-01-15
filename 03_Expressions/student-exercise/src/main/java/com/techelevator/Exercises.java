@@ -220,10 +220,19 @@ public class Exercises {
 	 */
 	public boolean loneTeen(int a, int b) {
 		
+		if (a >=13 && a <=19 && b <13 || b >19) {
+			return true;
+		}
+		if (a <13 && a >19 && b >=13 || b <=19) {
+			return true;
+		}
 		
 		return false;
-		
 	}
+		
+	
+		
+	
 	
 	
 	/*
@@ -316,14 +325,12 @@ public class Exercises {
 	 */
 	public int dateFashion(int you, int date) {
 		
-		if (you >=8 && date >2 || date >=8 && you >2) {
-			return 2;
-		}
-		
-		if (you  < 8 && date >2 || date  < 8 && you >2) {
-			return 1;
-		}
-		
+	if (you >2 && you >=8 || date >2 && date >=8) {
+		return 2;
+	}
+	if (you >2 && you <8 || date >2 && date <8) {
+		return 1;
+	}
 		return 0;
 	}
 	
@@ -400,6 +407,22 @@ public class Exercises {
 	 alarmClock(0, false) → "10:00"
 	 */
 	public String alarmClock(int day, boolean vacation) {
+		
+		if (day >=1 && day <=5 && !vacation) {
+			return "7:00";
+		}
+		if (day < 1 && day >5 && !vacation) {
+			return "10:00";
+		}
+		if (day >=1 && day <=5 && vacation) {
+			return "10:00";
+		
+		}
+		if (day < 1 && day >5 && vacation) {
+			return "off";
+		
+		}
+		
 		return "";
 	}
 
@@ -411,6 +434,13 @@ public class Exercises {
 	 in1To10(11, true) → true
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
+		
+		if (n <=1 || n >=10 && outsideMode) {
+			return true;
+		}
+		if (n >=1 && n <=10 || !outsideMode) {
+			return true;
+		}
 		return false;
 	}
 
@@ -527,6 +557,13 @@ public class Exercises {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
+		
+		if (b > a && c >b && !bOk) {
+			return true;
+		}
+		if (b <= a && c> b && bOk) {
+			return true;
+		}
 		return false;
 	}
 
@@ -550,6 +587,7 @@ public class Exercises {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
+		
 		return 0;
 	}
 
@@ -564,6 +602,7 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
+		
 		return 0;
 	}
 
