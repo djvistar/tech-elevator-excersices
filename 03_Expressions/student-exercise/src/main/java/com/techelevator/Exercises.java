@@ -453,6 +453,10 @@ public class Exercises {
 	 specialEleven(24) → false
 	 */
 	public boolean specialEleven(int n) {
+		if ( n % 11 == 0 || n % 11 == 1 ) {
+			return true;
+			
+		}
 		return false;
 	}
 
@@ -465,6 +469,9 @@ public class Exercises {
 	 */
 	public boolean more20(int n) {
 		
+		if (n % 20 == 1 || n % 20 == 2) {
+			return true;
+		}
 			
 		return false;
 	}
@@ -478,6 +485,9 @@ public class Exercises {
 	 */
 	public boolean old35(int n) {
 	
+	 if  ( n % 3 ==0 && n % 5 >0 || n % 5 ==0 && n % 3 >0) {
+		 return true;
+	 }
 		return false;
 	}
 
