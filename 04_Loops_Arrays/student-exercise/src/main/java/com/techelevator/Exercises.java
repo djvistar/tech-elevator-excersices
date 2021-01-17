@@ -144,6 +144,18 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
+		int[] newNum = new int[3];
+		
+		newNum[0] = nums[0];
+		newNum[1] = nums[1];
+		newNum[2] = nums[2];
+		
+		
+		if (newNum.length >= 2) {
+			
+			return newNum[0] + newNum[1];
+		}
+			
 		return 0;
 	}
 
@@ -154,8 +166,21 @@ public class Exercises {
 	 middleWay([7, 7, 7], [3, 8, 0]) → [7, 8]
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
-	public int[] middleWay(int[] a, int[] b) {
-		return new int[] {};
+	public int[]  middleWay(int[] a, int[] b) {
+		int[] newA = new int [3];
+		int[] newB	= new int [3];
+		
+		newA[0] = a[0];
+		newA[1] = a[1];
+		newA[2] = a[2];
+		newB[0] = b[0];
+		newB[1] = b[1];
+		newB[2] = b[2];
+		
+		
+		return  new int[] {newA[1], newB[1]};
+
+	
 	}
 
 	/*
@@ -201,6 +226,9 @@ public class Exercises {
 	 has22([2, 1, 2]) → false
 	 */
 	public boolean has22(int[] nums) {
+		
+		
+		
 		return false;
 	}
 	
@@ -212,9 +240,16 @@ public class Exercises {
 	 */
 	public boolean lucky13(int[] nums) {
 		
+		 for (int i =0;i<nums.length ;i++)
+			 
+			   if ( nums[i] == 1 || nums[i] == 3) {
+				   
+			   return false;
+			   }
+
 		
 		
-		return false;
+		return true;
 	}
 
 	/*
@@ -224,7 +259,27 @@ public class Exercises {
 	 sum28([1, 2, 3, 4]) → false
 	 */
 	public boolean sum28(int[] nums) {
+		
+		int sum = 0;
+		
+		  for (int i = 0; i <nums.length;i++)
+		
+		  {
+	
+		  if (nums[i] == 2) sum+=2;
+		
+		  }
+		
+		  if (sum == 8) {
+			  return true;
+		  }
+		   
+
+		
+		
 		return false;
+		
+		
 	}
 
 }
