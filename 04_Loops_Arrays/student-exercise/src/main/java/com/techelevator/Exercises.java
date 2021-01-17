@@ -15,7 +15,7 @@ public class Exercises {
 			return true;
 		}
 		
-		
+	
 		return false;
 	}
 
@@ -133,7 +133,29 @@ public class Exercises {
 	 maxEnd3([2, 11, 3]) → [3, 3, 3]
 	 */
 	public int[] maxEnd3(int[] nums) {
-		return new int[] {};
+		
+		 if (nums[0] >= nums[nums.length-1]) {
+			 
+			   nums[0] = nums[0];
+			
+			   nums[1] = nums[0];
+			
+			   nums[2] = nums[0];
+			
+			   }
+			
+			   else if (nums[0] <= nums[nums.length-1]) {
+			 
+			   nums[0] = nums[nums.length-1];
+			
+			   nums[1] = nums[nums.length-1];
+			
+			   nums[2] = nums[nums.length-1];
+			
+			   }
+		
+			   return new int[] { nums[0],nums[1],nums[2]};
+	
 	}
 
 	/*
@@ -144,19 +166,19 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
-		int[] newNum = new int[3];
 		
-		newNum[0] = nums[0];
-		newNum[1] = nums[1];
-		newNum[2] = nums[2];
-		
-		
-		if (newNum.length >= 2) {
+		if (nums.length == 1) {
 			
-			return newNum[0] + newNum[1];
+		 return nums[0];
 		}
 			
-		return 0;
+		if (nums.length == 0) {
+			
+		 return 0;
+			  }
+		  
+			  return nums[0] + nums[1];
+
 	}
 
 	/*
@@ -179,7 +201,6 @@ public class Exercises {
 		
 		
 		return  new int[] {newA[1], newB[1]};
-
 	
 	}
 
@@ -216,9 +237,19 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13, 3, 4]) → 10
 	 */
 	public int sum13(int[] nums) {
-		return 0;
+		
+		int sum = 0;
+		
+		for (int i=0; i<nums.length; i++) {
+			
+		if (nums[i]==13) i++;
+		
+		else sum+=nums[i];
 	}
-
+		return sum;
+		}
+		
+	
 	/*
 	 13. Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
 	 has22([1, 2, 2]) → true
@@ -228,6 +259,22 @@ public class Exercises {
 	public boolean has22(int[] nums) {
 		
 		
+		for (int i = 0; i < nums.length; i++) {
+		
+			    if (nums[i] == 2 && i > 0 && nums[i-1] == 2) {
+		
+			      return true;
+			
+			    }
+			
+			    if (nums[i] == 2 && i < nums.length-1 && nums[i+1] == 2) {
+			
+			      return  true;
+		
+			    }
+			
+			  }
+
 		
 		return false;
 	}
