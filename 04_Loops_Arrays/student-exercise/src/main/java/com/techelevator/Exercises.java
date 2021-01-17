@@ -27,6 +27,10 @@ public class Exercises {
 	 sameFirstLast([1, 2, 1]) → true
 	 */
 	public boolean sameFirstLast(int[] nums) {
+		
+		if (nums[0] == nums[nums.length -1]) {
+			return true;
+		}
 		return false;
 	}
 
@@ -72,7 +76,13 @@ public class Exercises {
 	 sum3([7, 0, 0]) → 7
 	 */
 	public int sum3(int[] nums) {
-		return 0;
+		
+		 int[] newSum = new int[3];
+		 
+		 newSum[0]= nums[0];
+		newSum[1]=  nums[1];
+		newSum[2] = nums[2]	;	
+	return newSum[0] + newSum[1]+newSum[2];
 	}
 
 	/*
@@ -201,6 +211,9 @@ public class Exercises {
 	 lucky13([1, 2, 4]) → false
 	 */
 	public boolean lucky13(int[] nums) {
+		
+		
+		
 		return false;
 	}
 
