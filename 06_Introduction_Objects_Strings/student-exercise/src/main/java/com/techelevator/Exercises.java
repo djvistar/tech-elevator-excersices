@@ -20,6 +20,7 @@ public class Exercises {
 	 makeAbba("What", "Up") → "WhatUpUpWhat"
 	 */
 	public String makeAbba(String a, String b) {
+		
 		return null;
 	}
 
@@ -176,6 +177,10 @@ public class Exercises {
 	 endsLy("oddy") → false
 	 */
 	public boolean endsLy(String str) {
+		
+		if (str.endsWith("ly")) {
+			return true;
+		}
 		return false;
 	}
 
