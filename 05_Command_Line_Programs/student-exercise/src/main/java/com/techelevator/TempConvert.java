@@ -21,11 +21,11 @@ public class TempConvert {
 			String input = myScanner.nextLine();
 		
 			if (input.equalsIgnoreCase("Celsius") || input.equalsIgnoreCase("C")) {
-				  System.out.print(temp + "C" +" is " + temp *1.8 + 32  +"C");
+				  System.out.print(temp + "C" +" is " + temp *1.8 + 32  +"F");
 				  
 			}
 			if (input.equalsIgnoreCase("Farenheit") || input.equalsIgnoreCase("F")){
-				  System.out.print(temp + "F" +" is " + (temp- 32)/1.8  +"F");
+				  System.out.print(temp + "F" +" is " + (temp- 32)/1.8  +"C");
 			}
 
 	
