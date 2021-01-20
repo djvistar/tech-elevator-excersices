@@ -16,7 +16,18 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"]
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		
+
+		List<String> array2List = new ArrayList<String>();
+		
+		for (String input: stringArray){
+			array2List.add(input);
+		}
+		
+		
+		return array2List;
+		
+	
 	}
 
 	/*
@@ -26,8 +37,17 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
-		return null;
+		
+		
+		String[] newArray = stringList.toArray(new String[stringList.size()]);
+		  
+			
+		return newArray;
+		
+		
+
 	}
+	
 
 	/*
 	 Given an array of Strings, return an ArrayList containing the same Strings in the same order
@@ -47,7 +67,19 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-		return null;
+		
+		List<Double> newList = new ArrayList<Double>();
+		//Loop thru the int[] and deivde each number in the array by 2 and put result in newList
+		//create a for loop from int i = 0 to length of intArray
+		
+		for (int num : intArray) {
+			
+			
+		}
+		//get element at i aand devide by 2 to assign to variable xyz
+		//add xyz into newList at i position
+		
+		return newList;
 	}
 
 	/*

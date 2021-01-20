@@ -34,7 +34,27 @@ public class Exercises {
 	 *
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		
+		Map<String, String> animals = new HashMap<String, String>();
+		
+		if (animalName ==null || animalName.equals("")) {
+			return "unknown";
+		}
+		
+		String key = animalName.toUpperCase();
+		animals.put("RHINO", "Crash");
+		
+		
+		String group = animals.get(key);
+		
+		if (group == null) {
+			//not found ,return unknown
+			
+		}
+		return group;
+		
+		
+		
 	}
 
 	/*
@@ -74,6 +94,11 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
+		
+		
+		
+		
+		
 		return null;
 	}
 
