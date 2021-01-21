@@ -43,13 +43,23 @@ public class Exercises {
 		
 		String key = animalName.toUpperCase();
 		animals.put("RHINO", "Crash");
+		animals.put("GIRAFFE", "Tower");
+		animals.put("ELEPHANT", "Herd");
+		animals.put("LION", "Pride");
+		animals.put("CROW", "Murder");
+		animals.put("PIGEON", "Kit");
+		animals.put("FLAMINGO", "Pat");
+		animals.put("DEER", "Herd");
+		animals.put("DOG", "Pack");
+		animals.put("CROCODILE", "Float");
 		
+			
 		
 		String group = animals.get(key);
 		
 		if (group == null) {
 			//not found ,return unknown
-			
+			return "unknown";
 		}
 		return group;
 		
@@ -80,7 +90,30 @@ public class Exercises {
 	 *
 	 */
 	public double isItOnSale(String itemNumber) {
-		return -1.0;
+		
+		Map<String, Double> items = new HashMap<String, Double>();
+		
+		if (itemNumber ==null || itemNumber.equals("")) {
+			return  0.00;
+		}
+		
+		String key = itemNumber.toUpperCase();
+		items.put("KITCHEN4001", 0.20);
+		items.put("GARAGE1070", 0.15);
+		items.put("LIVINGROOM", 0.10);
+		items.put("KITCHEN6073", 0.40);
+		items.put("BEDROOM3434", 0.60);
+		items.put("BATH0073", 0.15);
+		
+		
+		Double onSale = items.get(key);
+		
+		if (onSale == null) {
+			
+			return 0.00;
+		}
+		
+		return onSale;
 	}
 
 	/*
