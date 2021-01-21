@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Exercises {
@@ -57,7 +58,23 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		
+        List<String> no4LetterWords = new ArrayList<String>();
+		
+
+
+           for (String input: stringArray){
+        	   
+	                if (input.length() != 4 ){
+		
+		   no4LetterWords.add(input);
+	   }
+	
+     }
+
+       return no4LetterWords;
+		
+	
 	}
 
 	/*
@@ -68,18 +85,22 @@ public class Exercises {
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
 		
-		List<Double> newList = new ArrayList<Double>();
-		//Loop thru the int[] and deivde each number in the array by 2 and put result in newList
-		//create a for loop from int i = 0 to length of intArray
 		
-		for (int num : intArray) {
+		
+		List<Double> newNumbers = new ArrayList<Double>();
+		
+		double numbers;
+		
+		if(intArray.length > 0) {
 			
-			
+			for(int i = 0; i < intArray.length; i++) {
+				numbers = intArray[i] / 2.0;
+				
+				newNumbers.add(numbers);
+			}
 		}
-		//get element at i aand devide by 2 to assign to variable xyz
-		//add xyz into newList at i position
 		
-		return newList;
+		return newNumbers;
 	}
 
 	/*
@@ -89,8 +110,22 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 64362
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+		
+		int largest = integerList.get(0);
+		 
+		for(int i = 0; i < integerList.size(); i++) {
+			
+			if(integerList.get(i) >largest ) {
+				largest  = integerList.get(i);
+			}
+		}
+		return largest ;
 	}
+		
+		
+		
+		
+
 
 	/*
 	 Given an array of Integers, return a List of Integers containing just the odd values.
@@ -99,7 +134,17 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		
+		List<Integer> oddOnly = new ArrayList<Integer>();
+		 
+		for(int i = 0; i < integerArray.length; i++) {
+			if(integerArray[i] % 2 == 1) {
+				oddOnly.add(integerArray[i]);
+			}
+		}
+		return oddOnly;
+		
+		
 	}
 
 	/*
@@ -110,7 +155,26 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
+		
+		int count = 0;
+		 
+		for(int i = 0; i < integerList.size(); i++) 
+ 
+		{
+			if(integerList.get(i) == intToFind) 
+ 
+			{
+				count++;
+				if(count >= 2) 
+ 
+				{
+					return true;
+				}
+			}
+		}
+		
 		return false;
+		
 	}
 
 	/*
@@ -127,7 +191,32 @@ public class Exercises {
 	 equals "1")
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+		
+		
+		List<String> fizzOrBuzz = new ArrayList<String>();
+		
+		 
+		for(int i = 0; i < integerArray.length; i++) {
+			
+			if((integerArray[i] % 3 == 0) && (integerArray[i] % 5 == 0)) {
+				
+				fizzOrBuzz.add("FizzBuzz");
+				
+			}
+			else if(integerArray[i] % 3 == 0) {
+				fizzOrBuzz.add("Fizz");
+				
+			}
+			else if(integerArray[i] % 5 == 0) {
+				fizzOrBuzz.add("Buzz");
+				
+			}
+			else {
+				fizzOrBuzz.add(integerArray[i].toString());
+			}
+ 
+		}
+		return fizzOrBuzz;
 	}
 
 	/*
@@ -138,7 +227,29 @@ public class Exercises {
 	 interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
-		return null;
+		
+		List<Integer> interLeave = new ArrayList<Integer>();
+		
+		 
+		while(listOne.size() > 0 || listTwo.size() > 0){
+			
+			if(listOne.size() == 0) {
+				
+				interLeave.addAll(listTwo);
+				return interLeave ;
+				
+			}
+			else if(listTwo.size() == 0) {
+				
+				interLeave.addAll(listOne);
+				return interLeave ;
+			}
+			interLeave.add(listOne.remove(0));
+			interLeave.add(listTwo.remove(0));
+		}
+		return interLeave ;
+	
+		
 	}
 
 }
