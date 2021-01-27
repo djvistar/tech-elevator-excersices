@@ -2,10 +2,12 @@ package com.techelevator;
 
 public class SavingsAccount extends BankAccount {
 	
-	public SavingsAccount() {
-		super();
+	
+public SavingsAccount(String accountHolderName, String accountNumber) {
 		
-		}
+	super(accountHolderName, accountNumber );
+	}
+	
 	
 	
 public SavingsAccount(String accountHolderName, String accountNumber, int balance) {
@@ -21,28 +23,27 @@ public SavingsAccount(String accountHolderName, String accountNumber, int balanc
 public int withdraw(int amountToWithdraw) {
 	
 
-//	if (super.getBalance() > 150) {
-//
-//		super.withdraw(amountToWithdraw);
-//
-//	} else {
+	if (super.getBalance() > 150) {
+
+		super.withdraw(amountToWithdraw);
+
+	} 
+	else {
 		
-		if (super.getBalance() < 150 && super.getBalance() >= 0) {
+		if (super.getBalance() < 150 && super.getBalance() >= 0	&&
+				amountToWithdraw <= super.getBalance()){
 			
 			super.withdraw(amountToWithdraw + 2);
+		} 
+		else {
 			
-		} else {
-			if (amountToWithdraw > super.getBalance()) {
-				
-				return super.getBalance();
-			}
+
+			return super.getBalance();
 		}
 
-	
-	
+	}
 	return super.getBalance();
 }
-
 
 
 
