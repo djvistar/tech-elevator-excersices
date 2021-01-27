@@ -23,29 +23,34 @@ public SavingsAccount(String accountHolderName, String accountNumber, int balanc
 public int withdraw(int amountToWithdraw) {
 	
 
-	if (super.getBalance() > 150) {
+//	if (getBalance() < 150) {
+//
+//		super.withdraw(+2);
+//	} 
+//	else {
+//		
+//		if (super.getBalance() < 150 && super.getBalance() >= 0	&&
+//				amountToWithdraw <= super.getBalance()){
+//			
+//			super.withdraw(amountToWithdraw + 2);
+//		} 
+//	
+//
+//	}
+//	return super.getBalance();
+//}
 
-		super.withdraw(amountToWithdraw);
-
-	} 
-	else {
-		
-		if (super.getBalance() < 150 && super.getBalance() >= 0	&&
-				amountToWithdraw <= super.getBalance()){
-			
-			super.withdraw(amountToWithdraw + 2);
-		} 
-		else {
-			
-
-			return super.getBalance();
-		}
-
-	}
-	return super.getBalance();
-}
-
-
+	   
+	        // only perform transaction of positive $ and room for fee
+        if (getBalance() - amountToWithdraw >= 2) {
+	            super.withdraw(amountToWithdraw);
+	            // Assess $2 fee if it goes below $150
+	            if (getBalance() < 150) {
+                super.withdraw(2);
+	            }
+	        }
+	        return getBalance();
+	    }
 
 
 }
