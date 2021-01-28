@@ -9,12 +9,8 @@ public class BankCustomer implements Accountable {
 	private String name;
     private String address;
     private String phoneNumber;
-	private List<Accountable> accounts = new ArrayList<Accountable>(); ;
-	
-	
-	
-	
-	
+	private List<Accountable> accounts = new ArrayList<Accountable>(); 
+
 	
 	
 	//getters and setters
@@ -42,28 +38,33 @@ public class BankCustomer implements Accountable {
 	}
 	
 	
-	
+	//add acct
 	
 	
 	public void addAccount(Accountable newAccount) {
 		//List<Accountable> accounts = new ArrayList<Accountable>();
 		
 		accounts.add(newAccount);
-		
-		
+			
 
 	}
 	
+	
+	//vip
+	
 	public boolean isVip() {
+		
+	
 		
 		 int totalBalance = 0;
 
          for (Accountable account : accounts)
          {
+        
              totalBalance += getBalance();
          }
 
-         if (totalBalance >= 25000)
+         if (totalBalance >= 25000 )
          {
              return true;
          }
