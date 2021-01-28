@@ -17,7 +17,9 @@ public class BankAccount implements Accountable {
         this.accountNumber = accountNumber;
         this.balance = balance;
     }
-    
+//    public BankAccount() {
+//    	
+//    }
    
 
     public String getAccountHolderName() {

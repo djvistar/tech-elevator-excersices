@@ -12,20 +12,20 @@ public class CreditCardAccount implements Accountable {
 	    
 	    public  CreditCardAccount(String accountHolder, String accountNumber) {
 	    	
-    	 this.accountHolder= accountHolder;
+    	     this.accountHolder = accountHolder;
 	         this.accountNumber = accountNumber;
 	        this.debt = 0;
 	    	
 	    }
 	    
-	    public CreditCardAccount(String accountHolder, String accountNumber, int debt) {
+    public CreditCardAccount(String accountHolder, String accountNumber, int debt) {
 	        this.accountHolder = accountHolder;
-	        this.accountNumber = accountNumber;
-	        this.debt = debt;
+        this.accountNumber = accountNumber;
+        this.debt = debt;
 	    }
 	    
 	    //getters
-		public String getAccountHolde() {
+		public String getAccountHolder() {
 			return accountHolder;
 		}
 		public String getAccountNumber() {
