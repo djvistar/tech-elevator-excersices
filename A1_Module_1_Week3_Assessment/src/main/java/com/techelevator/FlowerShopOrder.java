@@ -1,6 +1,6 @@
 package com.techelevator;
 
-public class FlowerShopOrder {
+public class FlowerShopOrder extends FlowerShop {
 
 	private String bouquetType;
 	private int numberOfRoses;
