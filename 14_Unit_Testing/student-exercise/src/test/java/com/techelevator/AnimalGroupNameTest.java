@@ -58,7 +58,15 @@ public class AnimalGroupNameTest {
 		
 		//Act
 		Assert.assertEquals("Testing value is: ", "Crash", animalGroupName.getHerd("Rhino"));
-		
+		Assert.assertEquals("Testing value is: ", "Tower", animalGroupName.getHerd("Giraffe"));
+		Assert.assertEquals("Testing value is: ", "Herd", animalGroupName.getHerd("Elephant"));
+		Assert.assertEquals("Testing value is: ", "Pride", animalGroupName.getHerd("Lion"));
+		Assert.assertEquals("Testing value is: ", "Murder", animalGroupName.getHerd("Crow "));
+		Assert.assertEquals("Testing value is: ", "Kit", animalGroupName.getHerd("Pigeon"));
+		Assert.assertEquals("Testing value is: ", "Pat", animalGroupName.getHerd("Flamingo"));
+		Assert.assertEquals("Testing value is: ", "Herd", animalGroupName.getHerd("Deer"));
+		Assert.assertEquals("Testing value is: ", "Pack", animalGroupName.getHerd("Dog"));
+		Assert.assertEquals("Testing value is: ", "Float", animalGroupName.getHerd("Crocodile"));
 		//Assert
 	}
 	
@@ -68,7 +76,24 @@ public class AnimalGroupNameTest {
 	
 		Assert.assertEquals("Testing value is: ", "Crash", animalGroupName.getHerd("RHINO"));
 		Assert.assertEquals("Testing value is: ", "Crash", animalGroupName.getHerd("rhino"));
-		Assert.assertEquals("Testing value is: ", "Crash", animalGroupName.getHerd("rHino"));
+		Assert.assertEquals("Testing value is: ", "Tower", animalGroupName.getHerd("GIRAFFE"));
+		Assert.assertEquals("Testing value is: ", "Tower", animalGroupName.getHerd("giraffe"));
+		Assert.assertEquals("Testing value is: ", "Pride", animalGroupName.getHerd("LION"));
+		Assert.assertEquals("Testing value is: ", "Pride", animalGroupName.getHerd("lion"));
+		Assert.assertEquals("Testing value is: ", "Murder", animalGroupName.getHerd("CROW"));
+		Assert.assertEquals("Testing value is: ", "Murder", animalGroupName.getHerd("crow"));
+		Assert.assertEquals("Testing value is: ", "Kit", animalGroupName.getHerd("PIGEON"));
+		Assert.assertEquals("Testing value is: ", "Kit", animalGroupName.getHerd("pigeon"));
+		Assert.assertEquals("Testing value is: ", "Pat", animalGroupName.getHerd("FLAMINGO"));
+		Assert.assertEquals("Testing value is: ", "Pat", animalGroupName.getHerd("flamingo"));
+		Assert.assertEquals("Testing value is: ", "Herd", animalGroupName.getHerd("DEER"));
+		Assert.assertEquals("Testing value is: ", "Herd", animalGroupName.getHerd("deer"));
+		Assert.assertEquals("Testing value is: ", "Pack", animalGroupName.getHerd("dog"));
+		Assert.assertEquals("Testing value is: ", "Pack", animalGroupName.getHerd("DOG"));
+		Assert.assertEquals("Testing value is: ", "Float", animalGroupName.getHerd("CROCODILE"));
+		Assert.assertEquals("Testing value is: ", "Float", animalGroupName.getHerd("crocodile"));
+		
+		
 	}
 	
 	@Test
