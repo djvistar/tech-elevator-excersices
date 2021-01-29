@@ -15,6 +15,14 @@ public class FlowerShopOrder {
 		
 	}
 	
+	public double getSubtotalt() {
+		subtotal = (numberOfRoses* 2.99)+ 19.99;
+		return subtotal;
+		
+		
+	}
+	
+	
 	
 	
 	
