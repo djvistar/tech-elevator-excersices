@@ -20,6 +20,7 @@ public class AnimalGroupName {
         animals.put("crocodile", "Float");
     }
 
+    
     /*
      * Given the name of an animal, return the name of a group of that animal
      * (e.g. "Elephant" -> "Herd", "Rhino" - "Crash").
