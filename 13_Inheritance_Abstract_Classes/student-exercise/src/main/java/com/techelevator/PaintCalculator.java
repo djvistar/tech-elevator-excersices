@@ -48,7 +48,7 @@ class PaintCalculator {
                     int length = Integer.parseInt(userInput.nextLine());
 
                     // Step Two:
-                    //newWall = new RectangleWall(name, color, height, length);
+                   newWall = new RectangleWall(name, color, height, length);
                 } else if (shapeChoice.equals("2")) {
                     System.out.println("Enter wall side length >>> ");
                     int sideLength = Integer.parseInt(userInput.nextLine());
