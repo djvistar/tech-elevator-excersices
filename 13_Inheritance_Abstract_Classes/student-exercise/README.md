@@ -1,4 +1,4 @@
-# Abstract classes and methods
+SquareWall# Abstract classes and methods
 
 The purpose of this exercise is to practice building class structures using abstract classes and methods and using encapsulation, inheritance, and polymorphism.
 
