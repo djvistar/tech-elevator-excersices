@@ -61,7 +61,7 @@ public class BankCustomer implements Accountable {
          for (Accountable account : accounts)
          {
         
-             totalBalance += getBalance();
+             totalBalance += (account.getBalance());
          }
 
          if (totalBalance >= 25000 )
@@ -70,6 +70,7 @@ public class BankCustomer implements Accountable {
          }
          return false;
      }
+	
 	
 	
 	
