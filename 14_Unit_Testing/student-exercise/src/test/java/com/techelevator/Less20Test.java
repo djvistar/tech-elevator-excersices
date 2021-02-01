@@ -39,16 +39,16 @@ private Less20  less20;
 public void test_to_return_true_if_number_is_1or2_less_than_multiple_of_20() {
 	
 	
-	Assert.assertEquals("Input: less20(18)", true, less20.isLessThanMultipleOf20(18));
-	Assert.assertEquals("Input: less20(19)", true, less20.isLessThanMultipleOf20(19));
-	Assert.assertEquals("Input: less20(20)", false, less20.isLessThanMultipleOf20(20));
-	Assert.assertEquals("Input: less20(38)", true, less20.isLessThanMultipleOf20(38));
-	Assert.assertEquals("Input: less20(39)", true, less20.isLessThanMultipleOf20(39));
-	Assert.assertEquals("Input: less20(40)", false, less20.isLessThanMultipleOf20(40));
-	Assert.assertEquals("Input: less20(21)", false, less20.isLessThanMultipleOf20(21));
-	Assert.assertEquals("Input: less20(41)", false, less20.isLessThanMultipleOf20(41));
+	Assert.assertEquals("less20(18): ", true, less20.isLessThanMultipleOf20(18));
+	Assert.assertEquals("less20(19): ", true, less20.isLessThanMultipleOf20(19));
+	Assert.assertEquals("less20(20): ", false, less20.isLessThanMultipleOf20(20));
+	Assert.assertEquals("less20(38): ", true, less20.isLessThanMultipleOf20(38));
+	Assert.assertEquals("less20(39): ", true, less20.isLessThanMultipleOf20(39));
+	Assert.assertEquals("less20(40): ", false, less20.isLessThanMultipleOf20(40));
+	Assert.assertEquals("less20(21): ", false, less20.isLessThanMultipleOf20(21));
+	Assert.assertEquals("less20(41): ", false, less20.isLessThanMultipleOf20(41));
 	
-	
+
 	
 	
 	
