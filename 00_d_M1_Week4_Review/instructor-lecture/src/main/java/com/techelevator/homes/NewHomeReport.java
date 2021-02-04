@@ -14,6 +14,7 @@ public class NewHomeReport {
 		try {
 			writer = new PrintWriter(new BufferedWriter(new FileWriter(fileName, true)));
 		} 
+		
 		catch (IOException e) {				
 			// TODO Auto-generated catch block
 			e.printStackTrace();
