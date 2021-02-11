@@ -135,6 +135,7 @@ SELECT MAX(population) AS max_population, countrycode
 FROM city
 GROUP BY countrycode
 ORDER BY max_population DESC;
+
 -- 22. The average, minimum, and maximum non-null life expectancy of each continent 
 -- ordered from lowest to highest average life expectancy. 
 -- (lowest average life expectancy: 52.5719, 37.2, 76.8, "Africa")
