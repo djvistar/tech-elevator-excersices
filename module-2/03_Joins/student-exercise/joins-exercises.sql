@@ -108,7 +108,7 @@ ORDER BY dollars_spent DESC LIMIT 10;
 -- 15. The store ID, street address, total number of rentals, total amount of sales (i.e. payments), and average sale of each store.
 -- (NOTE: Keep in mind that an employee may work at multiple stores.)
 -- (Store 1 has 7928 total rentals and Store 2 has 8121 total rentals)
-SELECT s.store_id, a.address, COUNT(r.rental_id) AS total_number_of_rentals, SUM(p.amount), AVG(p.amount)
+SELECT s.store_id, a.address,COUNT(r.rental_id) AS total_number_of_rentals, SUM(p.amount), AVG(p.amount)
 FROM store s
 JOIN address a ON a.address_id = s.address_id
 JOIN staff ON staff.store_id = s.store_id
@@ -128,12 +128,45 @@ GROUP BY f.title
 ORDER BY number_of_rentals DESC LIMIT 10;
 -- 17. The top five film categories by number of rentals 
 -- (#1 should be “Sports” with 1179 rentals and #5 should be “Family” with 1096 rentals)
-
+SELECT c.name , COUNT(r.rental_id) AS number_of_rentals
+FROM film f
+JOIN inventory i ON i.film_id = f.film_id
+JOIN rental r ON r.inventory_id = i.inventory_id
+JOIN film_category fc ON fc.film_id = f.film_id
+JOIN category c ON c.category_id = fc.category_id
+GROUP BY c.name
+ORDER BY number_of_rentals DESC LIMIT 5;
 -- 18. The top five Action film titles by number of rentals 
 -- (#1 should have 30 rentals and #5 should have 28 rentals)
-
+SELECT f.title , COUNT(r.rental_id) AS number_of_rentals
+FROM film f
+JOIN inventory i ON i.film_id = f.film_id
+JOIN rental r ON r.inventory_id = i.inventory_id
+JOIN film_category fc ON fc.film_id = f.film_id
+JOIN category c ON c.category_id = fc.category_id
+WHERE c.name='Action'
+GROUP BY f.title
+ORDER BY number_of_rentals DESC LIMIT 5;
 -- 19. The top 10 actors ranked by number of rentals of films starring that actor 
 -- (#1 should be “GINA DEGENERES” with 753 rentals and #10 should be “SEAN GUINESS” with 599 rentals)
-
+SELECT a.first_name, a.last_name, COUNT(r.rental_id) AS number_of_rentals
+FROM actor a
+JOIN film_actor fa ON fa.actor_id= a.actor_id
+JOIN film f ON f.film_id = fa.film_id
+JOIN inventory i ON i.film_id = f.film_id
+JOIN rental r ON r.inventory_id = i.inventory_id
+GROUP BY a.actor_id, a.first_name, a.last_name
+ORDER BY number_of_rentals DESC LIMIT 10;
 -- 20. The top 5 “Comedy” actors ranked by number of rentals of films in the “Comedy” category starring that actor 
 -- (#1 should have 87 rentals and #5 should have 72 rentals)
+SELECT a.first_name, a.last_name, COUNT(r.rental_id) AS number_of_rentals
+FROM actor a
+JOIN film_actor fa ON fa.actor_id= a.actor_id
+JOIN film f ON f.film_id = fa.film_id
+JOIN inventory i ON i.film_id = f.film_id
+JOIN rental r ON r.inventory_id = i.inventory_id
+JOIN film_category fc ON fc.film_id = f.film_id
+JOIN category c ON c.category_id = fc.category_id
+WHERE c.name='Comedy'
+GROUP BY a.actor_id, a.first_name, a.last_name
+ORDER BY number_of_rentals DESC LIMIT 5;
