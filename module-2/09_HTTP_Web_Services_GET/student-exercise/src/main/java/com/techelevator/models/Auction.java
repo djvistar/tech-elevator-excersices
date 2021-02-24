@@ -23,6 +23,7 @@ public class Auction {
         return id;
     }
 
+    
     public String getTitle() {
         return title;
     }
