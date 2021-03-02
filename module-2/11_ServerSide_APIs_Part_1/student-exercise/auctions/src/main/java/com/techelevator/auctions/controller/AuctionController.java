@@ -7,6 +7,7 @@ import com.techelevator.auctions.model.Auction;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,8 +21,15 @@ public class AuctionController {
     }
     
     // return list of all auctions
-    @RequestMapping(path = "", method = RequestMethod.GET)
-    public List<Auction> list() {
+    @RequestMapping( path = "", method = RequestMethod.GET)
+    public List<Auction> list(@RequestParam(defaultValue = "") String title_like, @RequestParam(defaultValue = "0") double currentBid_lte) {
+
+        if( !title_like.equals("") ) {
+            return dao.searchByTitle(title_like);
+        }
+        if(currentBid_lte > 0) {
+            return dao.searchByPrice(currentBid_lte);
+        }
 
         return dao.list();
     }
@@ -40,40 +48,42 @@ public class AuctionController {
     
    
          
-    @RequestMapping(path = "", method = RequestMethod.GET)
-    public List<Auction> list(@RequestParam(defaultValue = "") String title_like) {
-    	
-    	if( !title_like.equals("") ) {
-            return dao.searchByTitle(title_like);   	
-   }
-   	return dao.list();
-    }
-    
-    @RequestMapping(path = "", method = RequestMethod.GET)
-    public List<Auction> list(@RequestParam(defaultValue = "0") double currentBid_lte) {
-    	
-    	 if(currentBid_lte > 0) {
-             return dao.searchByPrice(currentBid_lte);
-         }
-  	
-    	return dao.list();
-    }
- 
-    
-    
-    
-    @RequestMapping( path = "", method = RequestMethod.GET)
-    public List<Auction> list(@RequestParam(defaultValue = "") String title_like, @RequestParam(defaultValue = "0") double currentBid_lte) {
+    @RequestMapping(path = "/filter", method = RequestMethod.GET)
+    public List<Auction> filterByTitleAndPrice(@RequestParam String title, @RequestParam double currentBid) {
 
-        if( !title_like.equals("") ) {
-            return dao.searchByTitle(title_like);
-        }
-        if(currentBid_lte > 0) {
-            return dao.searchByPrice(currentBid_lte);
+        List<Auction> filteredAuctions = new ArrayList<>();
+        List<Auction> auctions= list(title, currentBid);
+
+       
+        for (Auction auction: auctions) {
+          
+            if (title != null) {
+                if (auction.getTitle().toLowerCase().equals(title.toLowerCase())) {
+                	filteredAuctions.add(auction);
+                }
+            } else if (currentBid > 0){
+                if (auction.getCurrentBid() <=currentBid) {
+                	filteredAuctions.add(auction);
+                }
+
+            }
         }
 
-        return dao.list();
+        return filteredAuctions;
     }
+
+//    @RequestMapping( path = "", method = RequestMethod.GET)
+//    public List<Auction> list(@RequestParam(defaultValue = "") String title_like, @RequestParam(defaultValue = "0") double currentBid_lte) {
+//
+//        if( !title_like.equals("") ) {
+//            return dao.searchByTitle(title_like);
+//        }
+//        if(currentBid_lte > 0) {
+//            return dao.searchByPrice(currentBid_lte);
+//        }
+//
+//        return dao.list();
+//    }
     
     
 
