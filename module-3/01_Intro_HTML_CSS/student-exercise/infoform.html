@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>My Information Form</h1>
+        <nav>
+            <ul>
+                <li><a href="infoform.html">Submit Information</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    
+</body>
+<main >
+    <p>Please enter the requested information below:</p>
+
+    <!-- info form -->
+    <form action="http://www.myinfo.dev/api/form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <div>&nbsp;</div>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" />
+        <div>&nbsp;</div>
+
+        <label for="birth_date">Date of Birth:</label>
+        <input type="date" id="birth_date" name="birth_date" />
+        <div>&nbsp;</div>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color" />
+        <div>&nbsp;</div>
+
+        <label for="number">Favorite Number:</label>
+        <input type="number" id="number" name="number" />
+        <div>&nbsp;</div>
+
+        <label for="data">Confirm Data is Correct:</label>
+        <input type="checkbox" id="data" name="data" />
+        <div>&nbsp;</div>
+
+        <label for="submit"></label>
+        <input type="submit" id="submit" name="submit" />
+        <div>&nbsp;</div>
+
+    </form>
+</main>
+
+
+</html>
