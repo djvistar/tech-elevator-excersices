@@ -1,0 +1,78 @@
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: 
+    "logo intro";
+    row-gap: 50px;
+  
+    
+}
+#logo{
+    grid-area: logo;
+}
+#intro{
+    grid-area: intro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    grid-area: main;
+}
+#photo{
+    grid-area: photo;
+    align-items: center;
+}
+div{
+    grid-area:about;
+}
+#about-me{
+    grid-area: about-me;
+}
+#my-story{
+    grid-area: my-story;
+}
+.bottom{
+    grid-area: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   column-gap: 50px;
+}
+.mid{
+    grid-area: mid;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas:
+    "menu form form";
+}
+nav{
+    grid-area: menu; 
+}
+form{
+    grid-area: form;
+}
+footer{
+    grid-area: footer;
+  
+}
+.social-icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas:
+    "header header header"
+    "about-me photo photo"
+    "my-story photo photo"
+    "bottom bottom bottom";
+    row-gap: 20px;
+    column-gap: 50px;
+    
+}
