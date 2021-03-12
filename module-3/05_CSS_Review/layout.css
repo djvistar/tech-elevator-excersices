@@ -51,6 +51,12 @@ div{
 nav{
     grid-area: menu; 
 }
+#list{
+    display: flex;
+    flex-direction: column;
+   justify-content: space-evenly;
+  
+}
 form{
     grid-area: form;
 }
