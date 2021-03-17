@@ -110,15 +110,29 @@ function makeHappy(words) {
  *
  * Use `map` and an anonymous function.
  */
+/**
+ * 
+ * @param {array[]} addresses 
+ */
+
+// let address = {
+//   streetNumber: '100',
+//    streetName: 'Main',
+//     streetType: 'Street', 
+//     city: 'Atlanta', 
+//     state: 'Ga',
+//     zip: '30023'
+// }
 
 
-function getFullAddressesOfProperties(association) {
-
-   let address = association.map ( (association) => {
-      return '${streetNumber} ${streetName} ${streetType} ${city} ${state} ${zip}';
-    });
-    return address;
- }  
+ 
+function getFullAddressesOfProperties(addresses)
+{
+    return addresses.map((address) => 
+        {
+            return `${address.streetNumber} ${address.streetName} ${address.streetType} ${address.city} ${address.state} ${address.zip}`;
+        });
+}
 
 
 /*
