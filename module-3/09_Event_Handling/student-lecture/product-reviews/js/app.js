@@ -60,12 +60,42 @@ function displayReview(review) {
 
 // LECTURE STARTS HERE ---------------------------------------------------------------
 
+document.addEventListener('DOMContentLoaded', () => {
+
 // set the product reviews page title
 setPageTitle();
 // set the product reviews page description
 setPageDescription();
 // display all of the product reviews on our page
 displayReviews();
+
+
+const desc = document.querySelector('.description');
+
+desc.addEventListener('click', (event) => {
+toggleDescriptionEdit(event.target);
+} );
+
+const inputDes = document.getElementById('inputDesc');
+
+inputDes.addEventListener('keyup', (event) => {
+  if(event.key === 'Enter'){
+exitDescriptionEdit(event.target, true);
+  }
+  if (event.key === 'Escape'){
+    exitDescriptionEdit(event.target, false);
+  }
+} );
+
+inputDes.addEventListener('mouseleave', (event) => {
+  exitDescriptionEdit(event.target, false);
+});
+
+
+
+
+});
+
 
 /**
  * Take an event on the description and swap out the description for a text box.
@@ -131,4 +161,6 @@ function resetFormValues() {
 /**
  * I will save the review that was added using the add review from
  */
-function saveReview() {}
+function saveReview() {
+  
+}
