@@ -70,19 +70,26 @@ document.addEventListener("DOMContentLoaded", () =>
     tasks.forEach((task) => 
     {
       task.classList.add('completed')
-      task.querySelector('i').classList.add('completed')
+      task.querySelector('i').classList.add('completed')    
+     completeAll.innerText = 'Mark All Incomplete';
+  
     })
+    
   })
 
-  let allItemsIncomplete = false;
 
-  const incompleteAll = document.getElementById('toggleAll');
-  incompleteAll.addEventListener('click', () => 
+  
+
+  const uncompleteAll = document.getElementById('toggleAll');
+  uncompleteAll.addEventListener('dblclick', () => 
   {
     tasks.forEach((task) => 
     {
       task.classList.remove('completed')
       task.querySelector('i').classList.remove('completed')
+    
+
     })
   })
+  
 });
