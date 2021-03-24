@@ -10,7 +10,7 @@
     </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr >
         <td><input type="text" id="firstNameFilter"/></td>
         <td><input type="text" id="lastNameFilter"/></td>
         <td><input type="text" id="usernameFilter"/></td>
@@ -23,6 +23,15 @@
           </select>
         </td>
       </tr>
+      <tr  v-for="user in users" v-bind:key = "user"
+      v-bind:status="Disabled">
+        <td><b>{{user.firstName}}</b></td>
+        <td><b>{{user.lastName}}</b></td>
+        <td><b>{{user.username}}</b></td>
+        <td><b>{{user.emailAddress}}</b></td>
+      {{user.status}}
+      </tr>
+
       <!-- user listing goes here -->
     </tbody>
   </table>
@@ -33,6 +42,7 @@ export default {
   name: 'user-list',
   data() {
     return {
+      filter: {firstName:'', lastName:'', username:'', emailAddress:'', status},
       users: [
         { firstName: 'John', lastName: 'Smith', username: 'jsmith', emailAddress: 'jsmith@gmail.com', status: 'Active' },
         { firstName: 'Anna', lastName: 'Bell', username: 'abell', emailAddress: 'abell@yahoo.com', status: 'Active' },
@@ -42,8 +52,20 @@ export default {
         { firstName: 'Mark', lastName: 'Smith', username: 'msmith', emailAddress: 'msmith@foo.com', status: 'Disabled' }
       ]
     }
+  },
+  computed: {
+  filteredList() {
+    return this.users.filter((user) => {
+      return user.contains(this.filter);
+    });
   }
 }
+  
+
+
+  }
+
+
 </script>
 
 <style scoped>
