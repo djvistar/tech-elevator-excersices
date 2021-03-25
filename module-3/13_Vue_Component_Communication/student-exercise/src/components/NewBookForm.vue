@@ -37,7 +37,8 @@ export default {
         },
     methods: {
         saveBook() {
-            this.$store.commit('SAVE_BOOK', this.book);
+            this.book.read = false;
+            this.$store.commit('ADD_BOOK', this.book);
             this.book = {
                 title: '',
                 author: '',
