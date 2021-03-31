@@ -17,17 +17,17 @@ const routes = [
   },
   {
     path: '/myBooks',
-    name: 'MyBooks',
+    name: 'my-books',
     component: MyBooks
   },
   {
     path: '/addBook',
-    name: 'NewBook',
+    name: 'new-book',
     component: NewBook
   },
   {
     path: '/book/:isbn',
-    name: 'BookDetails',
+    name: 'book-details',
     component: BookDetails
   }
 

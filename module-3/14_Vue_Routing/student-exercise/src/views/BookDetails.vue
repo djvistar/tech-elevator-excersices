@@ -1,18 +1,16 @@
 <template>
     <div>
-       <reading-list />
+         <book-details />
     </div>
 </template>
 
 <script>
-import ReadingList from '@/components/ReadingList';
-export default {
-    name: 'book-details',
-    components: {
-        ReadingList,
+import BookDetails from '@/components/BookDetails';
+  export default { 
+    components: { 
+        BookDetails
     }
-    
-}
+  }
 </script>
 
 <style>
