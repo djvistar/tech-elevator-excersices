@@ -24,8 +24,17 @@ export default {
     };
   },
   methods: {
-    saveTopic() {}
-  }
+    saveTopic() {
+
+       topicService.add(this.topic).then(response =>{
+        if(response.status == 201){
+          this.$router.push("/");
+        }
+      })
+    }
+    }
+
+  
 };
 </script>
 
